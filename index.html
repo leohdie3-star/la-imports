@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LA Imports — Moda Masculina em Itajubá | @imports.la.oficial</title>
+<meta name="description" content="LA Imports — moda masculina e importados em Itajubá/MG. Camisetas, jeans, tênis, jaquetas e acessórios. Peça pelo WhatsApp e retire na loja: Av. Vicente Sanches, 296 — Varginha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0c; --bg2:#111114; --card:#15151a; --line:rgba(255,255,255,.09);
+    --gold:#c9a96a; --gold2:#e6c887; --txt:#f4f1ea; --mut:#a8a49a; --wa:#22c064;
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,Arial,sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .display{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:.04em;font-weight:400}
+  .serif-i{font-family:'Playfair Display',Georgia,serif;font-style:italic}
+
+  /* ===== Barra demonstrativo ===== */
+  .demo-bar{
+    background:linear-gradient(90deg,#1c1503,#3a2c07,#1c1503);color:#ffd97a;
+    text-align:center;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    padding:9px 14px;border-bottom:1px solid rgba(255,217,122,.35);
+  }
+  .demo-bar span{opacity:.75;font-weight:500;letter-spacing:.05em;text-transform:none}
+
+  /* ===== Header ===== */
+  header.site{
+    position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+    background:rgba(10,10,12,.82);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand-mark{
+    width:44px;height:44px;border:1.5px solid var(--gold);border-radius:11px;
+    display:grid;place-items:center;font-family:'Bebas Neue';font-size:21px;color:var(--gold);letter-spacing:.06em;
+  }
+  .brand b{font-family:'Bebas Neue';font-size:24px;letter-spacing:.12em;display:block;line-height:1}
+  .brand small{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+  .nav-links{display:none;gap:28px;font-size:13.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+  .nav-links a{text-decoration:none;color:var(--mut)} .nav-links a:hover{color:var(--gold2)}
+  @media(min-width:860px){.nav-links{display:flex}}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;
+    padding:13px 26px;border-radius:999px;font-size:15px;transition:.25s;border:1px solid transparent;cursor:pointer;
+  }
+  .btn-wa{background:var(--wa);color:#04160b}
+  .btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(34,192,100,.35)}
+  .btn-gold{background:var(--gold);color:#171204}
+  .btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,169,106,.3)}
+  .btn-ghost{border-color:rgba(255,255,255,.3);color:#fff;background:rgba(0,0,0,.25)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold2)}
+  .btn-sm{padding:10px 19px;font-size:13.5px}
+
+  /* ===== Hero ===== */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;isolation:isolate}
+  .hero-bg{position:absolute;inset:0;z-index:-2}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,.15) 38%,rgba(10,10,12,.88) 78%,var(--bg) 100%),
+               linear-gradient(90deg,rgba(10,10,12,.72) 0%,rgba(10,10,12,0) 58%);
+  }
+  .hero-in{padding:110px 0 74px;max-width:720px}
+  .kicker{
+    display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(201,169,106,.55);color:var(--gold2);
+    padding:7px 16px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+    background:rgba(0,0,0,.35);margin-bottom:24px;
+  }
+  .kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  .hero h1{font-family:'Bebas Neue';font-size:clamp(58px,10.5vw,118px);line-height:.94;letter-spacing:.02em}
+  .hero h1 em{font-family:'Playfair Display';font-style:italic;text-transform:none;letter-spacing:0;color:var(--gold2);font-size:.82em}
+  .hero p{margin:20px 0 30px;font-size:17.5px;line-height:1.65;color:#e8e4da;max-width:520px}
+  .hero p b{color:#fff}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:13px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;font-size:13px;color:var(--mut);font-weight:600;letter-spacing:.04em}
+  .hero-meta span{display:inline-flex;gap:8px;align-items:center}
+  .hero-meta i{color:var(--gold);font-style:normal}
+
+  /* ===== Faixa de benefícios ===== */
+  .strip{border-block:1px solid var(--line);background:var(--bg2)}
+  .strip-in{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+  @media(min-width:860px){.strip-in{grid-template-columns:repeat(4,1fr)}}
+  .strip-item{padding:22px 18px;border-right:1px solid var(--line);display:flex;gap:13px;align-items:flex-start}
+  .strip-item:last-child{border-right:0}
+  .strip-item .ic{font-size:21px;line-height:1}
+  .strip-item b{display:block;font-size:14px;margin-bottom:3px}
+  .strip-item small{color:var(--mut);font-size:12.5px;line-height:1.45;display:block}
+
+  /* ===== Seções ===== */
+  section.blk{padding:84px 0 10px}
+  .sec-head{max-width:640px;margin-bottom:38px}
+  .sec-head.center{margin-inline:auto;text-align:center}
+  .sec-tag{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;margin-bottom:12px}
+  .sec-head h2{font-family:'Bebas Neue';font-size:clamp(38px,5.6vw,56px);line-height:1;letter-spacing:.03em}
+  .sec-head p{color:var(--mut);margin-top:13px;font-size:15.5px;line-height:1.65}
+
+  /* ===== Categorias / filtros ===== */
+  .filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+  .chip{
+    border:1px solid var(--line);background:var(--card);color:var(--mut);border-radius:999px;
+    padding:10px 19px;font-size:13.5px;font-weight:700;cursor:pointer;transition:.2s;font-family:inherit;
+  }
+  .chip:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+  .chip.on{background:var(--gold);border-color:var(--gold);color:#171204}
+
+  /* ===== Vitrine ===== */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr);gap:20px}}
+  @media(min-width:1060px){.grid{grid-template-columns:repeat(4,1fr)}}
+  .prod{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    display:flex;flex-direction:column;transition:.28s;
+  }
+  .prod:hover{transform:translateY(-5px);border-color:rgba(201,169,106,.5);box-shadow:0 22px 44px rgba(0,0,0,.5)}
+  .prod figure{position:relative;aspect-ratio:4/4.6;overflow:hidden;background:#1b1b20}
+  .prod figure img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .prod:hover figure img{transform:scale(1.06)}
+  .tag{
+    position:absolute;top:12px;left:12px;background:rgba(8,8,10,.78);backdrop-filter:blur(6px);color:var(--gold2);
+    font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:999px;
+    border:1px solid rgba(201,169,106,.4);
+  }
+  .tag.hot{background:var(--gold);color:#171204;border-color:var(--gold)}
+  .prod-body{padding:17px 17px 19px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .prod-cat{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:700}
+  .prod h3{font-size:16.5px;line-height:1.3}
+  .prod .desc{font-size:13px;color:var(--mut);line-height:1.5}
+  .price{margin-top:auto;padding-top:9px}
+  .price .old{font-size:12.5px;color:var(--mut);text-decoration:line-through;margin-right:8px}
+  .price .now{font-size:21px;font-weight:800;color:#fff}
+  .price .parc{display:block;font-size:12px;color:var(--gold2);margin-top:2px;font-weight:600}
+  .price .aviso{display:block;font-size:10.5px;color:#7d7a72;margin-top:5px;letter-spacing:.03em}
+  .prod .btn{margin-top:12px;justify-content:center}
+
+  /* ===== Drop / look ===== */
+  .drop{
+    margin-top:84px;border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr;
+    border:1px solid var(--line);background:var(--bg2);
+  }
+  @media(min-width:900px){.drop{grid-template-columns:1.05fr 1fr}}
+  .drop figure{min-height:340px}
+  .drop figure img{width:100%;height:100%;object-fit:cover}
+  .drop-in{padding:44px 38px;display:flex;flex-direction:column;justify-content:center;gap:15px}
+  .drop-in h3{font-family:'Bebas Neue';font-size:clamp(34px,4.6vw,48px);line-height:1}
+  .drop-in p{color:var(--mut);line-height:1.65;font-size:15.5px}
+  .drop-list{list-style:none;display:grid;gap:9px;font-size:14.5px}
+  .drop-list li{padding-left:25px;position:relative}
+  .drop-list li::before{content:"—";position:absolute;left:0;color:var(--gold);font-weight:800}
+  .drop-list b{color:#fff}
+
+  /* ===== Sobre ===== */
+  .sobre{display:grid;grid-template-columns:1fr;gap:26px;align-items:stretch}
+  @media(min-width:900px){.sobre{grid-template-columns:1.1fr .9fr}}
+  .sobre-txt{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px 36px}
+  .sobre-txt h3{font-family:'Bebas Neue';font-size:36px;letter-spacing:.03em;margin-bottom:14px}
+  .sobre-txt p{color:var(--mut);line-height:1.75;font-size:15.5px;margin-bottom:14px}
+  .sobre-txt p b{color:var(--txt)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+  .stat{border:1px solid var(--line);border-radius:14px;padding:16px 12px;text-align:center;background:var(--bg2)}
+  .stat b{font-family:'Bebas Neue';font-size:27px;color:var(--gold2);display:block;letter-spacing:.05em}
+  .stat small{font-size:11px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+  .sobre-img{border-radius:24px;overflow:hidden;min-height:300px;border:1px solid var(--line)}
+  .sobre-img img{width:100%;height:100%;object-fit:cover}
+
+  /* ===== Como comprar ===== */
+  .steps{display:grid;gap:16px}
+  @media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px}
+  .step .n{font-family:'Bebas Neue';font-size:44px;color:transparent;-webkit-text-stroke:1.4px var(--gold);line-height:1}
+  .step h4{font-size:17px;margin:12px 0 8px}
+  .step p{color:var(--mut);font-size:14px;line-height:1.6}
+
+  /* ===== Depoimentos ===== */
+  .deps{display:grid;gap:16px}
+  @media(min-width:860px){.deps{grid-template-columns:repeat(3,1fr)}}
+  .dep{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:27px 24px;position:relative}
+  .dep .stars{color:var(--gold);letter-spacing:3px;font-size:14px;margin-bottom:13px}
+  .dep p{font-size:14.5px;line-height:1.65;color:#ddd8cd}
+  .dep footer{margin-top:17px;font-size:13px}
+  .dep footer b{display:block}
+  .dep footer small{color:var(--mut)}
+  .dep .demo-flag{
+    position:absolute;top:14px;right:14px;font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+    color:#ffd97a;border:1px solid rgba(255,217,122,.4);padding:4px 8px;border-radius:999px;
+  }
+
+  /* ===== Local / CTA final ===== */
+  .local{
+    margin-top:84px;border-radius:24px;padding:52px 38px;text-align:center;position:relative;overflow:hidden;
+    background:linear-gradient(150deg,#17130a 0%,#0d0d10 55%);border:1px solid rgba(201,169,106,.35);
+  }
+  .local h2{font-family:'Bebas Neue';font-size:clamp(38px,6vw,60px);line-height:1}
+  .local h2 span{color:var(--gold2)}
+  .local p{color:var(--mut);max-width:520px;margin:15px auto 28px;line-height:1.65;font-size:15.5px}
+  .local .info{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;margin-top:28px;font-size:14px;color:#d9d4c8;font-weight:600}
+  .local .info a{color:var(--gold2);text-decoration:none}
+
+  footer.site{border-top:1px solid var(--line);margin-top:80px;padding:36px 0 96px;background:var(--bg2)}
+  .foot{display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:flex-start}
+  footer.site p{color:var(--mut);font-size:13px;line-height:1.7;max-width:520px}
+  footer.site a{color:var(--gold2);text-decoration:none}
+  .cred{font-size:11.5px;color:#6d6a63;margin-top:20px;letter-spacing:.03em}
+
+  /* WhatsApp flutuante */
+  .wa-float{
+    position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;
+    background:var(--wa);display:grid;place-items:center;box-shadow:0 14px 34px rgba(0,0,0,.5);text-decoration:none;
+  }
+  .wa-float svg{width:30px;height:30px;fill:#04160b}
+  .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">Site demonstrativo — criado pela Consultoria Digital para a LA Imports <span>· produtos, preços e depoimentos são ilustrativos, para visualização do projeto</span></div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">LA</span>
+      <span><b>LA IMPORTS</b><small>Moda Masculina · Itajubá</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#vitrine">Vitrine</a>
+      <a href="#sobre">A Loja</a>
+      <a href="#como-comprar">Como Comprar</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/5535991413299?text=Oi!%20Vi%20o%20site%20da%20LA%20Imports%20e%20quero%20saber%20mais%20sobre%20as%20pe%C3%A7as." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1800&auto=format&fit=crop" alt="Homem com casaco estiloso — moda masculina LA Imports">
+  </div>
+  <div class="wrap hero-in">
+    <span class="kicker">Itajubá · MG — Moda masculina &amp; importados</span>
+    <h1>Vista-se como<br><em>quem já chegou.</em></h1>
+    <p>Na <b>LA Imports</b> você encontra as peças que elevam o seu estilo: camisetas, jeans, tênis, jaquetas e acessórios selecionados — sem sair de Itajubá. Escolha na vitrine, chame no WhatsApp e retire na loja.</p>
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="https://wa.me/5535991413299?text=Oi!%20Vi%20o%20site%20da%20LA%20Imports%20e%20quero%20ver%20as%20novidades." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn btn-ghost" href="#vitrine">Ver a vitrine ↓</a>
+    </div>
+    <div class="hero-meta">
+      <span><i>◆</i> Av. Vicente Sanches, 296 — Varginha</span>
+      <span><i>◆</i> @imports.la.oficial</span>
+      <span><i>◆</i> Atendimento direto no WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFÍCIOS ============ -->
+<div class="strip">
+  <div class="wrap strip-in">
+    <div class="strip-item"><span class="ic">🔥</span><div><b>Novidades toda semana</b><small>Drops e reposições anunciados primeiro no Instagram e no WhatsApp.</small></div></div>
+    <div class="strip-item"><span class="ic">💬</span><div><b>Compra sem sair de casa</b><small>Escolha aqui, confirme tamanho e disponibilidade no WhatsApp.</small></div></div>
+    <div class="strip-item"><span class="ic">💳</span><div><b>Parcele sua compra</b><small>Condições facilitadas no atendimento — consulte as opções do dia.</small></div></div>
+    <div class="strip-item"><span class="ic">📍</span><div><b>Loja física em Itajubá</b><small>Prove, troque ideia com a equipe e retire na hora, no bairro Varginha.</small></div></div>
+  </div>
+</div>
+
+<!-- ============ VITRINE ============ -->
+<section class="blk" id="vitrine">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Vitrine da semana</div>
+      <h2>As peças em destaque</h2>
+      <p>Uma amostra do que você encontra na LA Imports. Viu algo que é a sua cara? Um toque e você já está falando com a loja — confirma tamanho, cor e disponibilidade na hora.</p>
+    </div>
+
+    <div class="filters reveal" id="filtros">
+      <button class="chip on" data-f="todos">Todos</button>
+      <button class="chip" data-f="camisetas">Camisetas</button>
+      <button class="chip" data-f="jeans">Jeans &amp; Calças</button>
+      <button class="chip" data-f="tenis">Tênis</button>
+      <button class="chip" data-f="jaquetas">Jaquetas &amp; Moletons</button>
+      <button class="chip" data-f="acessorios">Acessórios</button>
+    </div>
+
+    <div class="grid" id="grade">
+
+      <article class="prod reveal" data-cat="camisetas">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=900&auto=format&fit=crop" alt="Camiseta premium lisa">
+          <span class="tag hot">Mais pedida</span>
+        </figure>
+        <div class="prod-body">
+          <span class="prod-cat">Camisetas</span>
+          <h3>Camiseta Premium Lisa — Algodão Pesado</h3>
+          <p class="desc">Modelagem reta, gola reforçada e caimento que valoriza. A básica que não é básica.</p>
+          <div class="price">
+            <span class="old">R$ 109,90</span><span class="now">R$ 89,90</span>
+            <span class="parc">em até 3x no cartão*</span>
+            <span class="aviso">Preço ilustrativo — demonstração</span>
+          </div>
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/5535991413299?text=Oi!%20Tenho%20interesse%20na%20Camiseta%20Premium%20Lisa%20do%20site.%20Tem%20no%20meu%20tamanho%3F">Quero essa peça</a>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-cat="camisetas">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=900&auto=format&fit=crop" alt="Camiseta estampada streetwear">
+          <span class="tag">Street</span>
+        </figure>
+        <div class="prod-body">
+          <span class="prod-cat">Camisetas</span>
+          <h3>Camiseta Oversized — Estampa Street</h3>
+          <p class="desc">Oversized de verdade: ombro caído, tecido encorpado e estampa exclusiva do drop.</p>
+          <div class="price">
+            <span class="now">R$ 119,90</span>
+            <span class="parc">em até 3x no cartão*</span>
+            <span class="aviso">Preço ilustrativo — demonstração</span>
+          </div>
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/5535991413299?text=Oi!%20Tenho%20interesse%20na%20Camiseta%20Oversized%20Street%20do%20site.%20Quais%20tamanhos%20tem%3F">Quero essa peça</a>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-cat="jeans">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=900&auto=format&fit=crop" alt="Calça jeans masculina">
+          <span class="tag">Essencial</span>
+        </figure>
+        <div class="prod-body">
+          <span class="prod-cat">Jeans &amp; Calças</span>
+          <h3>Calça Jeans Skinny — Lavagem Escura</h3>
+          <p class="desc">Jeans com elastano: ajusta no corpo, não amassa o rolê e combina com tudo.</p>
+          <div class="price">
+            <span class="old">R$ 199,90</span><span class="now">R$ 169,90</span>
+            <span class="parc">em até 4x no cartão*</span>
+            <span class="aviso">Preço ilustrativo — demonstração</span>
+          </div>
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/5535991413299?text=Oi!%20Tenho%20interesse%20na%20Cal%C3%A7a%20Jeans%20Skinny%20do%20site.%20Tem%20a%20minha%20numera%C3%A7%C3%A3o%3F">Quero essa peça</a>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-cat="tenis">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=900&auto=format&fit=crop" alt="Tênis esportivo colorido">
+          <span class="tag hot">Drop novo</span>
+        </figure>
+        <div class="prod-body">
+          <span class="prod-cat">Tênis</span>
+          <h3>Tênis Esportivo — Edição Color</h3>
+          <p class="desc">Presença garantida no pé: amortecimento macio e um visual que chama atenção de longe.</p>
+          <div class="price">
+            <span class="now">R$ 349,90</span>
+            <span class="parc">em até 6x no cartão*</span>
+            <span class="aviso">Preço ilustrativo — demonstração</span>
+          </div>
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/5535991413299?text=Oi!%20Tenho%20interesse%20no%20T%C3%AAnis%20Esportivo%20Edi%C3%A7%C3%A3o%20Color%20do%20site.%20Quais%20numera%C3%A7%C3%B5es%20tem%3F">Quero essa peça</a>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-cat="tenis">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=900&auto=format&fit=crop" alt="Par de tênis casuais">
+          <span class="tag">Casual</span>
+        </figure>
+        <div class="prod-body">
+          <span class="prod-cat">Tênis</span>
+          <h3>Tênis Casual — Par Coringa</h3>
+          <p class="desc">Do trabalho ao fim de semana: o par que resolve qualquer look sem esforço.</p>
+          <div class="price">
+            <span class="old">R$ 329,90</span><span class="now">R$ 289,90</span>
+            <span class="parc">em até 6x no cartão*</span>
+            <span class="aviso">Preço ilustrativo — demonstração</span>
+          </div>
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/5535991413299?text=Oi!%20Tenho%20interesse%20no%20T%C3%AAnis%20Casual%20do%20site.%20Pode%20me%20passar%20as%20cores%20e%20numera%C3%A7%C3%B5es%3F">Quero essa peça</a>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-cat="jaquetas">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=900&auto=format&fit=crop" alt="Jaqueta de couro masculina">
+          <span class="tag">Premium</span>
+        </figure>
+        <div class="prod-body">
+          <span class="prod-cat">Jaquetas &amp; Moletons</span>
+          <h3>Jaqueta Estilo Couro — Biker</h3>
+          <p class="desc">A peça de presença da coleção: acabamento premium e caimento impecável para a noite.</p>
+          <div class="price">
+            <span class="now">R$ 399,90</span>
+            <span class="parc">em até 8x no cartão*</span>
+            <span class="aviso">Preço ilustrativo — demonstração</span>
+          </div>
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/5535991413299?text=Oi!%20Tenho%20interesse%20na%20Jaqueta%20Biker%20do%20site.%20Quais%20tamanhos%20est%C3%A3o%20dispon%C3%ADveis%3F">Quero essa peça</a>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-cat="jaquetas">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=900&auto=format&fit=crop" alt="Moletom com capuz">
+          <span class="tag">Inverno</span>
+        </figure>
+        <div class="prod-body">
+          <span class="prod-cat">Jaquetas &amp; Moletons</span>
+          <h3>Moletom Canguru — Peluciado</h3>
+          <p class="desc">Quentinho, pesado e com capuz estruturado. Feito pro frio da Serra da Mantiqueira.</p>
+          <div class="price">
+            <span class="old">R$ 179,90</span><span class="now">R$ 149,90</span>
+            <span class="parc">em até 3x no cartão*</span>
+            <span class="aviso">Preço ilustrativo — demonstração</span>
+          </div>
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/5535991413299?text=Oi!%20Tenho%20interesse%20no%20Moletom%20Canguru%20do%20site.%20Tem%20outras%20cores%3F">Quero essa peça</a>
+        </div>
+      </article>
+
+      <article class="prod reveal" data-cat="acessorios">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=900&auto=format&fit=crop" alt="Boné masculino">
+          <span class="tag">Finaliza o look</span>
+        </figure>
+        <div class="prod-body">
+          <span class="prod-cat">Acessórios</span>
+          <h3>Boné Aba Curva — Logo Bordado</h3>
+          <p class="desc">O detalhe que fecha o visual: aba curva, regulagem traseira e bordado premium.</p>
+          <div class="price">
+            <span class="now">R$ 79,90</span>
+            <span class="parc">em até 2x no cartão*</span>
+            <span class="aviso">Preço ilustrativo — demonstração</span>
+          </div>
+          <a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="https://wa.me/5535991413299?text=Oi!%20Tenho%20interesse%20no%20Bon%C3%A9%20Aba%20Curva%20do%20site.%20Quais%20cores%20tem%3F">Quero essa peça</a>
+        </div>
+      </article>
+
+    </div>
+    <p style="color:#7d7a72;font-size:12px;margin-top:16px">* Condições de parcelamento ilustrativas nesta demonstração — confirme as condições reais no atendimento pelo WhatsApp.</p>
+  </div>
+</section>
+
+<!-- ============ DROP DA SEMANA ============ -->
+<div class="wrap">
+  <div class="drop reveal">
+    <figure><img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?q=80&w=1200&auto=format&fit=crop" alt="Homem de jaqueta em rua à noite — look completo LA Imports"></figure>
+    <div class="drop-in">
+      <div class="sec-tag">Look completo</div>
+      <h3>Monte o look. Saia pronto.</h3>
+      <p>Não sabe combinar? A equipe da LA Imports monta o look completo pra você — do tênis ao boné — de acordo com a ocasião e o seu bolso.</p>
+      <ul class="drop-list">
+        <li><b>Rolê / festa:</b> oversized + jeans skinny + tênis de presença</li>
+        <li><b>Dia a dia:</b> camiseta premium + bermuda ou calça coringa</li>
+        <li><b>Noite / frio:</b> jaqueta ou moletom peluciado + acessório</li>
+      </ul>
+      <div>
+        <a class="btn btn-gold" href="https://wa.me/5535991413299?text=Oi!%20Quero%20montar%20um%20look%20completo.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">Montar meu look no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SOBRE ============ -->
+<section class="blk" id="sobre">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">A loja</div>
+      <h2>Importado de verdade,<br>pertinho de você</h2>
+    </div>
+    <div class="sobre">
+      <div class="sobre-txt reveal">
+        <h3>LA IMPORTS — ITAJUBÁ/MG</h3>
+        <p>A <b>LA Imports</b> nasceu em Itajubá com uma proposta simples: trazer pra cidade as peças de moda masculina que antes você só encontrava viajando ou esperando semanas pela internet — <b>importados e multimarcas selecionados a dedo</b>, com atendimento de quem entende do seu estilo.</p>
+        <p>Camisetas, jeans, tênis, jaquetas, moletons e acessórios: tudo escolhido pensando no homem que quer se vestir bem todos os dias — do trabalho ao rolê. E com loja física no bairro Varginha, você <b>prova, compara e sai vestindo</b>.</p>
+        <p>Acompanhe os drops pelo Instagram <b>@imports.la.oficial</b> e garanta as novidades antes que acabem — as peças mais procuradas voam.</p>
+        <div class="stats">
+          <div class="stat"><b>+2 mil</b><small>Seguidores no Instagram</small></div>
+          <div class="stat"><b>Itajubá</b><small>Loja física · Varginha</small></div>
+          <div class="stat"><b>WhatsApp</b><small>Atendimento direto</small></div>
+        </div>
+      </div>
+      <figure class="sobre-img reveal">
+        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1200&auto=format&fit=crop" alt="Retrato de moda masculina — estilo LA Imports">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO COMPRAR ============ -->
+<section class="blk" id="como-comprar">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Simples assim</div>
+      <h2>Como comprar</h2>
+      <p>Sem cadastro, sem complicação: três passos e a peça é sua.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h4>Escolha na vitrine</h4><p>Navegue pelas peças aqui do site ou pelos drops no Instagram @imports.la.oficial e escolha as suas favoritas.</p></div>
+      <div class="step reveal"><div class="n">02</div><h4>Chame no WhatsApp</h4><p>Toque em “Quero essa peça”: a mensagem já vai com o nome do produto. A equipe confirma tamanho, cor e disponibilidade.</p></div>
+      <div class="step reveal"><div class="n">03</div><h4>Combine e retire</h4><p>Combine o pagamento e retire na loja — Av. Vicente Sanches, 296, Varginha, Itajubá/MG — ou consulte a entrega.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="blk" id="depoimentos">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="sec-tag">Quem veste, aprova</div>
+      <h2>O que dizem os clientes</h2>
+      <p>Depoimentos ilustrativos nesta demonstração — serão substituídos por avaliações reais da loja na versão final.</p>
+    </div>
+    <div class="deps">
+      <div class="dep reveal">
+        <span class="demo-flag">Ilustrativo</span>
+        <div class="stars">★★★★★</div>
+        <p>“Comprei o look completo pelo WhatsApp e retirei no mesmo dia. Atendimento rápido e as peças são de outro nível pra Itajubá.”</p>
+        <footer><b>Cliente LA Imports</b><small>Depoimento demonstrativo</small></footer>
+      </div>
+      <div class="dep reveal">
+        <span class="demo-flag">Ilustrativo</span>
+        <div class="stars">★★★★★</div>
+        <p>“O tênis que eu queria só achava na internet com frete absurdo. Na LA tinha no meu número e parcelei. Virou minha loja oficial.”</p>
+        <footer><b>Cliente LA Imports</b><small>Depoimento demonstrativo</small></footer>
+      </div>
+      <div class="dep reveal">
+        <span class="demo-flag">Ilustrativo</span>
+        <div class="stars">★★★★★</div>
+        <p>“Acompanho os drops no Instagram e já garanto pelo WhatsApp antes de acabar. Quem conhece, não compra mais em outro lugar.”</p>
+        <footer><b>Cliente LA Imports</b><small>Depoimento demonstrativo</small></footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO / CTA ============ -->
+<div class="wrap" id="contato">
+  <div class="local reveal">
+    <div class="sec-tag">Bora se vestir bem?</div>
+    <h2>Passa na loja ou<br><span>chama no WhatsApp</span></h2>
+    <p>As novidades chegam toda semana e as melhores peças acabam rápido. Garanta a sua agora falando direto com a equipe da LA Imports.</p>
+    <a class="btn btn-wa" href="https://wa.me/5535991413299?text=Oi!%20Vi%20o%20site%20da%20LA%20Imports%20e%20quero%20saber%20das%20novidades." target="_blank" rel="noopener">Falar com a LA Imports</a>
+    <div class="info">
+      <span>📍 Av. Vicente Sanches, 296 — Varginha, Itajubá/MG</span>
+      <span>📸 <a href="https://www.instagram.com/imports.la.oficial" target="_blank" rel="noopener">@imports.la.oficial</a></span>
+      <span>🕒 Horário: confirmar no WhatsApp</span>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#inicio" style="margin-bottom:12px">
+          <span class="brand-mark">LA</span>
+          <span><b>LA IMPORTS</b><small>Moda Masculina · Itajubá</small></span>
+        </a>
+        <p>Moda masculina e importados em Itajubá/MG. Vitrine online com atendimento direto no WhatsApp: escolha a peça, confirme e retire na loja.</p>
+      </div>
+      <p>
+        <b style="color:#fff">Onde estamos</b><br>
+        Av. Vicente Sanches, 296 — Varginha<br>
+        Itajubá/MG<br><br>
+        <b style="color:#fff">Fale com a loja</b><br>
+        WhatsApp: <a href="https://wa.me/5535991413299" target="_blank" rel="noopener">(35) 99141-3299</a><br>
+        Instagram: <a href="https://www.instagram.com/imports.la.oficial" target="_blank" rel="noopener">@imports.la.oficial</a>
+      </p>
+    </div>
+    <p class="cred">Site demonstrativo desenvolvido pela Consultoria Digital para a LA Imports — produtos, preços, parcelamentos e depoimentos exibidos são ilustrativos e serão substituídos pelos dados reais da loja na versão final. Fotos: banco de imagens (Unsplash).</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5535991413299?text=Oi!%20Vi%20o%20site%20da%20LA%20Imports%20e%20quero%20atendimento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4.6 28l6.3-1.6c1.5.8 3.3 1.3 5.1 1.3 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.7c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.7 1 1-3.6-.2-.4a9.7 9.7 0 0 1-1.5-5.3C6.7 9.5 10.9 5.3 16 5.3c5.1 0 9.3 4.2 9.3 9.6S21.1 24.7 16 24.7zm5.1-7.2c-.3-.1-2.3-1.1-2.7-1.3-.3-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.6-.2.2-.5.3-.8.1a11.6 11.6 0 0 1-5.6-4.8c-.4-.7.4-.7 1.2-2 .1-.3 0-.5-.1-.7l-1.2-2.8c-.3-.8-.6-.6-.9-.6h-.7c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.2 6.6 5.9.9.4 1.6.6 2.2.8 1 .3 1.8.3 2.5.2.8-.1 2.3-.9 2.7-1.7.3-.8.3-1.4.2-1.7-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+// Filtro da vitrine por categoria
+document.getElementById('filtros').addEventListener('click', function(e){
+  var btn = e.target.closest('.chip'); if(!btn) return;
+  document.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('on'); });
+  btn.classList.add('on');
+  var f = btn.getAttribute('data-f');
+  document.querySelectorAll('#grade .prod').forEach(function(p){
+    p.style.display = (f === 'todos' || p.getAttribute('data-cat') === f) ? '' : 'none';
+  });
+});
+// Reveal on scroll
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+
+</body>
+</html>
